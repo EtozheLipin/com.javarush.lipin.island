@@ -2,6 +2,9 @@ import entity.Island;
 import entity.Location;
 import utill.Settings;
 
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
 
 public class Application {
     public static void main(String[] args) {
@@ -9,8 +12,10 @@ public class Application {
 
         Location location = new Location();
 
-        Thread thread = new Thread(location);
-        thread.start();
+
+        ScheduledThreadPoolExecutor threadPool = new ScheduledThreadPoolExecutor(2);
+        threadPool.scheduleAtFixedRate(location, 0, 1, TimeUnit.SECONDS);
+
 
 
     }

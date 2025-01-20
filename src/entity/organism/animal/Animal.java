@@ -4,10 +4,12 @@ import entity.organism.Organism;
 
 public abstract class Animal extends Organism {
 
+    public boolean isAlive = true;
+
     double weight;
 
     public void eat(Organism organism) {
-        System.out.println("Ам ням");
+
     }
 
     public void starve() {
