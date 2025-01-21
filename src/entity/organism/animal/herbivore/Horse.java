@@ -1,6 +1,7 @@
 package entity.organism.animal.herbivore;
 
 import entity.organism.Organism;
+import entity.organism.animal.Animal;
 import entity.organism.plant.Plant;
 
 import java.util.List;

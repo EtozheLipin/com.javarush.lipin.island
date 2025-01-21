@@ -2,6 +2,8 @@ package entity.organism.animal;
 
 import entity.organism.Organism;
 
+import java.util.List;
+
 public abstract class Animal extends Organism {
 
     public boolean isAlive = true;
@@ -20,7 +22,7 @@ public abstract class Animal extends Organism {
         System.out.println("Топ-топ-топ");
     }
 
-    public Animal reproduce(Animal animal) {
+    public Animal reproduce(List<Animal> animals) {
         return null;
     }
 

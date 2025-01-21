@@ -5,14 +5,13 @@ import entity.organism.plant.Plant;
 import utill.Settings;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Location implements Runnable {
 
-    List<Plant> plants = new ArrayList<>();
-    List<Horse> horses = new ArrayList<>();
+   public List<Plant> plants = new ArrayList<>();
+   public List<Horse> horses = new ArrayList<>();
 
     public Location() {
         for (int i = 0; i < Settings.plantCount; i++) {
@@ -25,28 +24,25 @@ public class Location implements Runnable {
 
     @Override
     public void run() {
-        if (plants.isEmpty()) {
-            plants.add(new Plant());
-        }
-        for (int i = 0; i < ThreadLocalRandom.current().nextInt(3); i++) {
-            plants.add(plants.get(ThreadLocalRandom.current().nextInt(plants.size())).grow());
-        }
-        if (plants.size() > 200) {
-            int temp = plants.size() - 200;
-            for (int i = 0; i < temp; i++) {
-                plants.remove(0);
+        Plant.grow(plants);
+
+        // Ростения выросли
+
+        for (Horse horse : horses) {
+            if (plants.isEmpty()) {
+                break;
             }
+            Plant plantToEat = plants.get(ThreadLocalRandom.current().nextInt(plants.size()));
+            horse.eat(plantToEat);
+            plants.remove(plantToEat);
         }
-            // Ростения выросли
-            for (Horse horse : horses) {
-                if (plants.isEmpty()) {
-                    break;
-                }
-                Plant plantToEat = plants.get(ThreadLocalRandom.current().nextInt(plants.size()));
-                horse.eat(plantToEat);
-                plants.remove(plantToEat);
-            }
+
         // Лошади покушали
+
+
+
+        //Лошади размножились
+
         for (Horse horse : horses) {
             horse.starve();
         }
@@ -62,8 +58,10 @@ public class Location implements Runnable {
         }
         // Лошади голодают
 
+
         System.out.println("Растений на клетке: " + plants.size());
         System.out.println("\uD83D\uDC0E: " + horses.size());
 
     }
+
 }

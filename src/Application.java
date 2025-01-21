@@ -13,8 +13,10 @@ public class Application {
         Location location = new Location();
 
 
-        ScheduledThreadPoolExecutor threadPool = new ScheduledThreadPoolExecutor(2);
+
+        ScheduledThreadPoolExecutor threadPool = new ScheduledThreadPoolExecutor(1);
         threadPool.scheduleAtFixedRate(location, 0, 1, TimeUnit.SECONDS);
+
 
 
 
