@@ -1,4 +1,4 @@
 package entity.organism.animal.herbivore;
 
-public class Horse extends Herbivore{
+public class Deer extends Herbivore{
 }

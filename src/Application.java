@@ -1,6 +1,6 @@
 import entity.Island;
 import entity.Location;
-import utill.Settings;
+import config.Settings;
 
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -14,7 +14,7 @@ public class Application {
 
 
 
-        ScheduledThreadPoolExecutor threadPool = new ScheduledThreadPoolExecutor(1);
+        ScheduledThreadPoolExecutor threadPool = new ScheduledThreadPoolExecutor(4);
         threadPool.scheduleAtFixedRate(location, 0, 1, TimeUnit.SECONDS);
 
 
