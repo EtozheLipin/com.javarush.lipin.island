@@ -4,6 +4,6 @@ import entity.organism.Organism;
 
 public class Plant extends Organism {
 
-int weight = 1;
+public int weight = 1;
 
 }

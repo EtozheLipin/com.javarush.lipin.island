@@ -18,7 +18,7 @@ public class Settings {
 
     public final static int eagleCount = 0;
 
-    public final static int horseCount = 0;
+    public final static int horseCount = 2;
 
     public final static int deerCount = 0;
 
