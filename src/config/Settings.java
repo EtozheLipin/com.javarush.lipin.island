@@ -8,13 +8,13 @@ public class Settings {
 
     public final static int plantCount = 0;
 
-    public final static int wolfCount = 1;
+    public final static int wolfCount = 0;
 
-    public final static int boaCount = 1;
+    public final static int boaCount = 0;
 
     public final static int foxCount = 0;
 
-    public final static int bearCount = 0;
+    public final static int bearCount = 1;
 
     public final static int eagleCount = 0;
 
