@@ -1,5 +1,5 @@
 package entity.organism.animal.herbivore;
 
 public class Horse extends Herbivore{
-    public int weight = 400;
+    public double weight = 400.0;
 }

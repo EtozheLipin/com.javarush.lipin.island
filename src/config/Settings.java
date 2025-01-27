@@ -10,7 +10,7 @@ public class Settings {
 
     public final static int wolfCount = 1;
 
-    public final static int boaCount = 0;
+    public final static int boaCount = 1;
 
     public final static int foxCount = 0;
 
@@ -37,5 +37,6 @@ public class Settings {
     public final static int duckCount = 0;
 
     public final static int caterpillarCount = 0;
+
 
 }
