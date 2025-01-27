@@ -5,6 +5,7 @@ import entity.organism.animal.Animal;
 import entity.organism.animal.herbivore.*;
 import entity.organism.animal.predator.*;
 import entity.organism.plant.Plant;
+import utill.AnimalLifeCycle;
 import utill.PlantGrowth;
 import utill.PrintStatistics;
 
@@ -12,10 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Location implements Runnable {
-
+    AnimalLifeCycle animalLifeCycle = new AnimalLifeCycle(this);
     PlantGrowth plantGrowth = new PlantGrowth();
-   public List<Plant> plants = new ArrayList<>();
-   public List<Animal> animals = new ArrayList<>();
+    public List<Plant> plants = new ArrayList<>();
+    public List<Animal> animals = new ArrayList<>();
     PrintStatistics statistics = new PrintStatistics(plants, animals);
 
 
@@ -76,6 +77,9 @@ public class Location implements Runnable {
     @Override
     public void run() {
         plantGrowth.grow(plants);
+
+        animalLifeCycle.activity(animals);
+
 
         statistics.printStat();
     }

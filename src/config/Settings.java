@@ -8,7 +8,7 @@ public class Settings {
 
     public final static int plantCount = 0;
 
-    public final static int wolfCount = 0;
+    public final static int wolfCount = 1;
 
     public final static int boaCount = 0;
 

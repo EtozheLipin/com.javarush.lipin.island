@@ -2,18 +2,20 @@ package entity.organism.animal;
 
 import entity.Location;
 import entity.organism.Organism;
-import entity.organism.animal.herbivore.Herbivore;
+
+import java.util.concurrent.ThreadLocalRandom;
 
 
 public abstract class Animal extends Organism {
 
-   public int weight;
+    public int weight;
 
-  public boolean isAlive = true;
+    public void eat(Location location) {
+        Animal animal = location.animals.get(ThreadLocalRandom.current().nextInt(location.animals.size()));
+        this.weight = this.weight + animal.weight;
+        animal.isAlive = false;
 
-  public void eat(Location location) {
-
-   }
+    }
 
     void move() {
 
@@ -22,7 +24,6 @@ public abstract class Animal extends Organism {
     void reproduce() {
 
     }
-
 
 
     void starve() {
