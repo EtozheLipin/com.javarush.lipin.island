@@ -8,6 +8,10 @@ import entity.organism.plant.Plant;
 
 public class Herbivore extends Animal {
 
+    public Herbivore(double weight, double minWeight) {
+        super(weight, minWeight);
+    }
+
     @Override
     public void eat(Location location) {
         if (!location.plants.isEmpty()) {

@@ -7,7 +7,10 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Fox extends Predator {
 
-    public double weight = 8;
+
+    public Fox(double weight, double minWeight) {
+        super(weight, minWeight);
+    }
 
     @Override
     public void eat(Location location) {

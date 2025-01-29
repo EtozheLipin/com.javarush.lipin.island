@@ -2,6 +2,8 @@ package entity.organism.animal.herbivore;
 
 public class Sheep extends Herbivore{
 
-    public double weight = 70;
 
+    public Sheep(double weight, double minWeight) {
+        super(weight, minWeight);
+    }
 }

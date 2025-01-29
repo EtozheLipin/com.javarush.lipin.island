@@ -4,10 +4,16 @@ import entity.Location;
 import entity.organism.Organism;
 
 
-
 public abstract class Animal extends Organism {
 
-    public int weight;
+    public Animal(double weight, double minWeight) {
+        this.weight = weight;
+        this.minWeight = minWeight;
+    }
+
+    public double weight;
+
+    public double minWeight;
 
     public void eat(Location location) {
 
@@ -21,8 +27,10 @@ public abstract class Animal extends Organism {
 
     }
 
-
-    void starve() {
+    public void starve() {
         --weight;
+        if (weight < minWeight) {
+            this.isAlive = false;
+        }
     }
 }

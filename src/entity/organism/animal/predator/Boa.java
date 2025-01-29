@@ -7,7 +7,10 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Boa extends Predator {
 
-    public double weight = 15;
+
+    public Boa(double weight, double minWeight) {
+        super(weight, minWeight);
+    }
 
     @Override
     public void eat(Location location) {

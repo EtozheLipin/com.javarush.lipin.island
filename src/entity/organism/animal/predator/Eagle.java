@@ -7,7 +7,10 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Eagle extends Predator {
 
-    public double weight = 6;
+
+    public Eagle(double weight, double minWeight) {
+        super(weight, minWeight);
+    }
 
     @Override
     public void eat(Location location) {
