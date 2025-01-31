@@ -6,37 +6,37 @@ public class Settings {
 
     public final static int y = 1;
 
-    public final static int plantCount = 1;
+    public final static int plantCount = 100;
 
-    public final static int wolfCount = 0;
+    public final static int wolfCount = 4;
 
-    public final static int boaCount = 0;
+    public final static int boaCount = 4;
 
-    public final static int foxCount = 0;
+    public final static int foxCount = 4;
 
-    public final static int bearCount = 0;
+    public final static int bearCount = 4;
 
-    public final static int eagleCount = 0;
+    public final static int eagleCount = 4;
 
-    public final static int horseCount = 0;
+    public final static int horseCount = 4;
 
-    public final static int deerCount = 0;
+    public final static int deerCount = 4;
 
-    public final static int rabbitCount = 0;
+    public final static int rabbitCount = 4;
 
-    public final static int mouseCount = 0;
+    public final static int mouseCount = 4;
 
-    public final static int goatCount = 0;
+    public final static int goatCount = 4;
 
-    public final static int sheepCount = 0;
+    public final static int sheepCount = 4;
 
-    public final static int boarCount = 0;
+    public final static int boarCount = 4;
 
-    public final static int buffaloCount = 0;
+    public final static int buffaloCount = 4;
 
-    public final static int duckCount = 0;
+    public final static int duckCount = 4;
 
-    public final static int caterpillarCount = 0;
+    public final static int caterpillarCount = 4;
 
 
 

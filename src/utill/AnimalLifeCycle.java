@@ -4,7 +4,9 @@ import entity.Location;
 import entity.organism.animal.Animal;
 
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.Predicate;
 
 public class AnimalLifeCycle {
@@ -25,6 +27,16 @@ public class AnimalLifeCycle {
 
             animalList.removeAll(animalList.stream().filter(animal -> animal.isAlive == false).toList());
             location.plants.removeAll(location.plants.stream().filter(plant -> plant.isAlive == false).toList());
+
+            List<Animal> newAnimals = new ArrayList<>();
+
+            for (Animal animal : animalList) {
+                if(animal.getClass().getSimpleName().equals(animalList.get(ThreadLocalRandom.current().nextInt(animalList.size())).getClass().getSimpleName())) {
+                   newAnimals.add(animal.reproduce());
+                }
+            }
+            animalList.addAll(newAnimals);
+
         }
     }
 

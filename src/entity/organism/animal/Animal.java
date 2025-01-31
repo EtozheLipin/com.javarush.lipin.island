@@ -2,9 +2,12 @@ package entity.organism.animal;
 
 import entity.Location;
 import entity.organism.Organism;
+import repository.AnimalFactory;
 
 
 public abstract class Animal extends Organism {
+
+    AnimalFactory animalFactory = new AnimalFactory();
 
     public Animal(double weight, double minWeight) {
         this.weight = weight;
@@ -23,8 +26,8 @@ public abstract class Animal extends Organism {
 
     }
 
-    void reproduce() {
-
+   public Animal reproduce() {
+return animalFactory.createNewAnimal(this);
     }
 
     public void starve() {
