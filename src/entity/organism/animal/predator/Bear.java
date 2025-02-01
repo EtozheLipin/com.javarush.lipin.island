@@ -7,9 +7,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Bear extends Predator {
 
-
     public Bear(double weight, double minWeight) {
         super(weight, minWeight);
+        this.maxQuantity = 5;
     }
 
     @Override

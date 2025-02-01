@@ -10,6 +10,7 @@ public class Boa extends Predator {
 
     public Boa(double weight, double minWeight) {
         super(weight, minWeight);
+        this.maxQuantity = 30;
     }
 
     @Override

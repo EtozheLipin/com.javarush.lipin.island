@@ -7,6 +7,8 @@ import repository.AnimalFactory;
 
 public abstract class Animal extends Organism {
 
+    public int maxQuantity = 20;
+
     AnimalFactory animalFactory = new AnimalFactory();
 
     public Animal(double weight, double minWeight) {

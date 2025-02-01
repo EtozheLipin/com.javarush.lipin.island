@@ -10,6 +10,7 @@ public class Fox extends Predator {
 
     public Fox(double weight, double minWeight) {
         super(weight, minWeight);
+        this.maxQuantity = 30;
     }
 
     @Override

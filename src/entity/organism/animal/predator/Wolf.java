@@ -10,6 +10,7 @@ public class Wolf extends Predator {
 
     public Wolf(double weight, double minWeight) {
         super(weight, minWeight);
+        this.maxQuantity = 30;
     }
 
     @Override

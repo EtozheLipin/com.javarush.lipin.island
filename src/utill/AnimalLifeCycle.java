@@ -7,7 +7,6 @@ import entity.organism.animal.Animal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.function.Predicate;
 
 public class AnimalLifeCycle {
 
@@ -35,7 +34,12 @@ public class AnimalLifeCycle {
                    newAnimals.add(animal.reproduce());
                 }
             }
-            animalList.addAll(newAnimals);
+
+            for (Animal newAnimal : newAnimals) {
+                if(newAnimal.maxQuantity > animalList.stream().filter(animal -> animal.getClass().getSimpleName().equals(newAnimal.getClass().getSimpleName())).toList().size()){
+                    animalList.add(newAnimal);
+                }
+            }
 
         }
     }

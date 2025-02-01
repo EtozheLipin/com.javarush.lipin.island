@@ -10,6 +10,7 @@ public class Eagle extends Predator {
 
     public Eagle(double weight, double minWeight) {
         super(weight, minWeight);
+        this.maxQuantity = 20;
     }
 
     @Override
