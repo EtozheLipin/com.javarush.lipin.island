@@ -7,7 +7,6 @@ import entity.organism.animal.predator.*;
 import entity.organism.plant.Plant;
 import utill.AnimalLifeCycle;
 import utill.PlantGrowth;
-import utill.PrintStatistics;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +16,6 @@ public class Location implements Runnable {
     PlantGrowth plantGrowth = new PlantGrowth();
     public List<Plant> plants = new ArrayList<>();
     public List<Animal> animals = new ArrayList<>();
-    PrintStatistics statistics = new PrintStatistics(plants, animals);
 
 
     public Location() {
@@ -79,8 +77,5 @@ public class Location implements Runnable {
         plantGrowth.grow(plants);
 
         animalLifeCycle.activity(animals);
-
-
-        statistics.printStat();
     }
 }

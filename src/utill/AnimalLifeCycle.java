@@ -30,13 +30,15 @@ public class AnimalLifeCycle {
             List<Animal> newAnimals = new ArrayList<>();
 
             for (Animal animal : animalList) {
-                if(animal.getClass().getSimpleName().equals(animalList.get(ThreadLocalRandom.current().nextInt(animalList.size())).getClass().getSimpleName())) {
-                   newAnimals.add(animal.reproduce());
+                if (animal.getClass().getSimpleName().equals(animalList.get(ThreadLocalRandom.current().nextInt(animalList.size())).getClass().getSimpleName()) ) {
+                    if(ThreadLocalRandom.current().nextInt(100) > 50) {
+                        newAnimals.add(animal.reproduce());
+                    }
                 }
             }
 
             for (Animal newAnimal : newAnimals) {
-                if(newAnimal.maxQuantity > animalList.stream().filter(animal -> animal.getClass().getSimpleName().equals(newAnimal.getClass().getSimpleName())).toList().size()){
+                if (newAnimal.maxQuantity > animalList.stream().filter(animal -> animal.getClass().getSimpleName().equals(newAnimal.getClass().getSimpleName())).toList().size()) {
                     animalList.add(newAnimal);
                 }
             }

@@ -2,9 +2,9 @@ package config;
 
 public class Settings {
 
-    public final static int x = 1;
+    public final static int x = 10;
 
-    public final static int y = 1;
+    public final static int y = 10;
 
     public final static int plantCount = 100;
 
