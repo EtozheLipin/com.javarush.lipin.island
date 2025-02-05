@@ -1,8 +1,11 @@
 package entity.organism.animal;
 
+import entity.Island;
 import entity.Location;
 import entity.organism.Organism;
 import repository.AnimalFactory;
+
+import java.util.concurrent.ThreadLocalRandom;
 
 
 public abstract class Animal extends Organism {
@@ -26,8 +29,25 @@ public abstract class Animal extends Organism {
 
     }
 
-   public void move() {
-
+   public void move(Island island, Location location) {
+           Location newLocation;
+           int moveX = location.x;
+           int moveY = location.y;
+           int xShift;
+           int yShift;
+           if (ThreadLocalRandom.current().nextInt(2) > 1) {
+               xShift = 1;
+           } else {
+               xShift = -1;
+           }
+           if (ThreadLocalRandom.current().nextInt(2) > 1) {
+               yShift = 1;
+           } else {
+               yShift = -1;
+           }
+           newLocation = island.map[moveX + xShift][moveY + yShift];
+           this.isAlive = false;
+           newLocation.animals.add(animalFactory.createNewAnimal(this));
     }
 
    public Animal reproduce() {

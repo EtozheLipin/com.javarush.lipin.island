@@ -16,9 +16,16 @@ public class Location implements Runnable {
     PlantGrowth plantGrowth = new PlantGrowth();
     public List<Plant> plants = new ArrayList<>();
     public List<Animal> animals = new ArrayList<>();
+    public int x;
+    public int y;
+    public Island island;
 
 
-    public Location() {
+    public Location(int x, int y, Island island) {
+
+        this.x = x;
+        this.y = y;
+        this.island = island;
 
         for (int i = 0; i < Settings.plantCount; i++) {
             plants.add(new Plant());
@@ -76,6 +83,6 @@ public class Location implements Runnable {
     public void run() {
         plantGrowth.grow(plants);
 
-        animalLifeCycle.activity(animals);
+        animalLifeCycle.activity(animals, island);
     }
 }

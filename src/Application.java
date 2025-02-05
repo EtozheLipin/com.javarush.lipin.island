@@ -4,14 +4,17 @@ import entity.Location;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+// Через несколько секунд поток лочится, проблема с методом перемещения
+// Сижу в болезненных раздумьях
+// Юра, прости за такой бардак...сложно)
 
 public class Application {
     public static void main(String[] args) {
-        Island island = new Island();
+       Island island = new Island();
 
         for (int i = 0; i < island.map.length; i++) {
             for (int j = 0; j < island.map[i].length; j++) {
-                island.map[i][j] = new Location();
+                island.map[i][j] = new Location(i, j, island);
             }
         }
         ScheduledThreadPoolExecutor threadPool = new ScheduledThreadPoolExecutor(4);

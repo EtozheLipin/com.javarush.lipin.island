@@ -1,5 +1,6 @@
 package utill;
 
+import entity.Island;
 import entity.Location;
 import entity.organism.animal.Animal;
 
@@ -16,7 +17,7 @@ public class AnimalLifeCycle {
         this.location = location;
     }
 
-    public void activity(List<Animal> animalList) {
+    public void activity(List<Animal> animalList, Island island) {
         if (!animalList.isEmpty()) {
             for (Animal animal : animalList) {
                 animal.eat(location);
@@ -42,6 +43,10 @@ public class AnimalLifeCycle {
                     animalList.add(newAnimal);
                 }
             }
+            for (Animal animal : animalList) {
+                animal.move(island, location);
+            }
+            animalList.removeAll(animalList.stream().filter(animal -> animal.isAlive == false).toList());
         }
     }
 
