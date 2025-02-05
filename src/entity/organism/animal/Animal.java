@@ -30,24 +30,26 @@ public abstract class Animal extends Organism {
     }
 
    public void move(Island island, Location location) {
-           Location newLocation;
-           int moveX = location.x;
-           int moveY = location.y;
-           int xShift;
-           int yShift;
-           if (ThreadLocalRandom.current().nextInt(2) > 1) {
-               xShift = 1;
-           } else {
-               xShift = -1;
-           }
-           if (ThreadLocalRandom.current().nextInt(2) > 1) {
-               yShift = 1;
-           } else {
-               yShift = -1;
-           }
-           newLocation = island.map[moveX + xShift][moveY + yShift];
-           this.isAlive = false;
-           newLocation.animals.add(animalFactory.createNewAnimal(this));
+        if(ThreadLocalRandom.current().nextInt(100) > 90) {
+            Location newLocation;
+            int moveX = location.x;
+            int moveY = location.y;
+            int xShift;
+            int yShift;
+            if (ThreadLocalRandom.current().nextInt(2) > 1) {
+                xShift = 1;
+            } else {
+                xShift = -1;
+            }
+            if (ThreadLocalRandom.current().nextInt(2) > 1) {
+                yShift = 1;
+            } else {
+                yShift = -1;
+            }
+            newLocation = island.map[moveX + xShift][moveY + yShift];
+            newLocation.animals.add(animalFactory.createNewAnimal(this));
+            this.isAlive = false;
+        }
     }
 
    public Animal reproduce() {

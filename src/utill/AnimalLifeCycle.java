@@ -44,9 +44,9 @@ public class AnimalLifeCycle {
                 }
             }
             for (Animal animal : animalList) {
-                animal.move(island, location);
+                    animal.move(island, location);
             }
-            animalList.removeAll(animalList.stream().filter(animal -> animal.isAlive == false).toList());
+
         }
     }
 

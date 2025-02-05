@@ -4,7 +4,6 @@ import entity.Location;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-// Через несколько секунд поток лочится, проблема с методом перемещения
 // Сижу в болезненных раздумьях
 // Юра, прости за такой бардак...сложно)
 
