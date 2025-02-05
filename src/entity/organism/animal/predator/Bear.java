@@ -10,6 +10,7 @@ public class Bear extends Predator {
     public Bear(double weight, double minWeight) {
         super(weight, minWeight);
         this.maxQuantity = 5;
+        this.speed = 2;
     }
 
     @Override

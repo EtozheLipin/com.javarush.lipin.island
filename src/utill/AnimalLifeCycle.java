@@ -42,7 +42,6 @@ public class AnimalLifeCycle {
                     animalList.add(newAnimal);
                 }
             }
-
         }
     }
 

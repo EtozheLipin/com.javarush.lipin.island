@@ -46,22 +46,22 @@ public class Island implements Runnable {
 
             }
         }
-        System.out.print("Растений " + plantsCount+"  ");
-        System.out.print(" Волков " + wolfsCount+"  ");
-        System.out.print(" Удав " + boaCount+"  ");
-        System.out.print(" Лиса " + foxCount+"  ");
-        System.out.print(" Медведь " + bearCount+"  ");
-        System.out.print(" Орел " + eagleCount+"  ");
-        System.out.print(" Лошадь " + horseCount+"  ");
-        System.out.print(" Олень " + deerCount+"  ");
-        System.out.print(" Кролик " + rabbitCount+"  ");
-        System.out.print(" Мышка " + mouseCount+"  ");
-        System.out.print(" Коза " + goatCount+"  ");
-        System.out.print(" Овца " + sheepCount+"  ");
-        System.out.print(" Кабан " + boarCount+"  ");
-        System.out.print(" Буйвол " + buffaloCount+"  ");
-        System.out.print(" Утка " + duckCount+"  ");
-        System.out.print(" Гусеница " + caterpillarCount+"  ");
+        System.out.print("Растений " + plantsCount + "  ");
+        System.out.print(" \uD83D\uDC3A " + wolfsCount + "  ");
+        System.out.print(" \uD83D\uDC0D " + boaCount + "  ");
+        System.out.print(" \uD83E\uDD8A " + foxCount + "  ");
+        System.out.print(" \uD83D\uDC3B " + bearCount + "  ");
+        System.out.print(" \uD83E\uDD85 " + eagleCount + "  ");
+        System.out.print(" \uD83D\uDC0E " + horseCount + "  ");
+        System.out.print(" \uD83E\uDD8C " + deerCount + "  ");
+        System.out.print(" \uD83D\uDC07 " + rabbitCount + "  ");
+        System.out.print(" \uD83D\uDC01 " + mouseCount + "  ");
+        System.out.print(" \uD83D\uDC10 " + goatCount + "  ");
+        System.out.print(" \uD83D\uDC11 " + sheepCount + "  ");
+        System.out.print(" \uD83D\uDC17 " + boarCount + "  ");
+        System.out.print(" \uD83D\uDC03 " + buffaloCount + "  ");
+        System.out.print(" \uD83E\uDD86 " + duckCount + "  ");
+        System.out.print(" \uD83D\uDC1B " + caterpillarCount + "  ");
         System.out.println();
     }
 

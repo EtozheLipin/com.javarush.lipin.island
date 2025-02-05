@@ -7,6 +7,8 @@ import repository.AnimalFactory;
 
 public abstract class Animal extends Organism {
 
+    public int speed;
+
     public int maxQuantity = 20;
 
     AnimalFactory animalFactory = new AnimalFactory();
@@ -24,7 +26,7 @@ public abstract class Animal extends Organism {
 
     }
 
-    void move() {
+   public void move() {
 
     }
 
@@ -38,4 +40,5 @@ return animalFactory.createNewAnimal(this);
             this.isAlive = false;
         }
     }
+
 }
