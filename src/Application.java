@@ -16,7 +16,7 @@ public class Application {
                 island.map[i][j] = new Location(i, j, island);
             }
         }
-        ScheduledThreadPoolExecutor threadPool = new ScheduledThreadPoolExecutor(4);
+        ScheduledThreadPoolExecutor threadPool = new ScheduledThreadPoolExecutor(1);
         for (int i = 0; i < island.map.length; i++) {
             for (int j = 0; j < island.map[i].length; j++) {
                 threadPool.scheduleAtFixedRate(island.map[i][j], 0, 1, TimeUnit.SECONDS);

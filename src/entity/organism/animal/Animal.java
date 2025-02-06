@@ -30,7 +30,6 @@ public abstract class Animal extends Organism {
     }
 
    public void move(Island island, Location location) {
-        if(ThreadLocalRandom.current().nextInt(100) > 90) {
             Location newLocation;
             int moveX = location.x;
             int moveY = location.y;
@@ -46,10 +45,14 @@ public abstract class Animal extends Organism {
             } else {
                 yShift = -1;
             }
-            newLocation = island.map[moveX + xShift][moveY + yShift];
+            try {
+                newLocation = island.map[moveX + xShift][moveY + yShift];
+            } catch (ArrayIndexOutOfBoundsException e) {
+                return;
+            }
             newLocation.animals.add(animalFactory.createNewAnimal(this));
             this.isAlive = false;
-        }
+
     }
 
    public Animal reproduce() {
